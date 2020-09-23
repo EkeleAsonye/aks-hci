@@ -57,4 +57,5 @@ This issue will be fixed in a future release.
 Windows Admin Center will not deploy Azure Kubernetes Service to an environment with separate storage and compute clusters as it expects the compute and storage resources to be provided by the same cluster. In most cases it will not find CSVs exposed by the compute cluster and will refuse to proceed with deployment.
 This issue will be fixed in a future release.
 
-
+## No access control logic has been implemented to restrict which gRPC services are accessible to clients of the Cloud Agent.
+Implement an Access Control layer in the Cloud Agent. This should cryptographically verify the client’s identity, and use that identity to determine whether the client is permitted to: Invoke gRPC methods, or access specific objects in the Cloud Agent object model (secrets, virtual machines, containers etc).
